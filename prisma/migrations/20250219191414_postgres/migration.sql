@@ -1,11 +1,13 @@
 -- CreateTable
 CREATE TABLE "Employee" (
-    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "id" SERIAL NOT NULL,
     "name" TEXT NOT NULL,
     "age" INTEGER NOT NULL,
     "email" TEXT NOT NULL,
     "role" TEXT NOT NULL,
-    "salary" INTEGER NOT NULL
+    "salary" INTEGER NOT NULL,
+
+    CONSTRAINT "Employee_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateIndex
