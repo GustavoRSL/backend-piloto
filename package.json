@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "start": "node src/server.js",
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/server.js",
+    "build": "prisma generate && npm run start",
+    "postinstall": "prisma generate"
   },
   "keywords": [],
   "author": "",
