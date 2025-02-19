@@ -45,7 +45,9 @@ app.post("/employees", async (req, res) => {
     });
     res.status(201).json(employee);
   } catch (error) {
-    res.status(500).json({ error: "Erro ao criar funcionário" });
+    res
+      .status(500)
+      .json({ error: `Erro ao criar funcionário ${error.message}` });
   }
 });
 
